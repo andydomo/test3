@@ -1,0 +1,24 @@
+{
+  "type": "none",
+  "authCodeText": "//This logging is here for testing! Remove before publishing your connector\r\nDOMO.log('metadata.account.username: ' + metadata.account.username);\r\nDOMO.log('metadata.account.password: ' + metadata.account.password); \r\n\r\nvar encodedData = DOMO.b64EncodeUnicode(metadata.account.username + ':' + metadata.account.password);\r\n\r\nhttprequest.addHeader('Authorization', 'Basic ' + encodedData);\r\n\r\nvar res = httprequest.get('https://developer.domo.com/samplecrm');  \r\n\r\nif (httprequest.getStatusCode() == 200) {\r\n  auth.authenticationSuccess();\r\n} else {\r\n  auth.authenticationFailed('Your username and password are incorrect');\r\n}",
+  "userName": "",
+  "password": "",
+  "apiKey": "",
+  "clientKey": "",
+  "clientSecret": "",
+  "authorizationURL": "",
+  "accessTokenURL": "",
+  "oauthUserName": null,
+  "oauthPassword": null,
+  "scope": "",
+  "customAccountFields": [
+    {
+      "label": null,
+      "value": null,
+      "type": null
+    }
+  ],
+  "additionalParameters": "",
+  "tokenAddlParams": "",
+  "accesstokenMethod": "GET"
+}
